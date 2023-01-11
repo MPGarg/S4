@@ -36,13 +36,11 @@ Backpropagation calcualtions start once we have output and error is calculated.
       - As E2 is constant wrt w5 thus only E1 remains
         - ∂E_total/∂w5 = ∂E1/∂w5
       - Simplyfying equation further
-        	- ∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1\*∂a_o1/∂o1\*∂o1/∂w5
-      - ∂E1/∂a01
-			
-∂E1/∂a01 = ∂((1/2) * (t1 - a_o1)^2)/∂a_o1 = (a_o1 - t1)			
-∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1 * (1 - a_o1)			
-∂o1/∂w5 = a_h1			
+        - ∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1\*∂a_o1/∂o1\*∂o1/∂w5
+      - ∂E1/∂a01 is calculated below
+	- ∂E1/∂a01 = ∂((1/2) \* (t1 - a_o1)^2)/∂a_o1 = (a_o1 - t1)			
+      - ∂a_o1/∂o1 is calculated below (sigmoid differential)
+	- ∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1 \* (1 - a_o1)			
+      - ∂o1/∂w5 calculation	
+        - ∂o1/∂w5 = a_h1			
 
-100. First list item
-     - First nested list item
-       - Second nested list item
