@@ -35,7 +35,7 @@ Backpropagation calcualtions start once we have output and error is calculated.
       - ∂E_total/∂w5 = ∂(E1+E2)/∂w5	
       - As E2 is constant wrt w5 thus only E1 remains
         - ∂E_total/∂w5 = ∂E1/∂w5
-      - Simplyfying equation further
+      - Simplifying equation further
         - ∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1\*∂a_o1/∂o1\*∂o1/∂w5
       - ∂E1/∂ao1 is calculated below
         - ∂E1/∂ao1 = ∂((1/2) \* (t1 - a_o1)^2)/∂a_o1 = (a_o1 - t1)			
@@ -64,23 +64,23 @@ Backpropagation calcualtions start once we have output and error is calculated.
 4. Similar calculation is done for ∂E_total/∂a_h2:
       - ∂E_total/∂a_h2 = (a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8
 
-5. Gradiant for w1 will be represented as below:
+5. Gradient for w1 will be represented as below:
       - ∂E_total/∂w1 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w1
       - ∂E_total/∂a_h1 is already calculated in step 3
-      - ∂a_h1/∂h1 is sigmoid diffential
+      - ∂a_h1/∂h1 is sigmoid differential
       - ∂h1/∂w1 is equal to i1
       - Overall equation for ∂E_total/∂w1 can be represented as:
         - ∂E_total/∂w1 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w7) * ( a_h1 * (1 - a_h1) ) * i1
 
-6. Similar calculations can be preformed on w2, w3 and w4. Following are their gradient respectively
+6. Similar calculations can be performed on w2, w3 and w4. Following are their gradient respectively
       - ∂E_total/∂w2 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w7) * ( a_h1 * (1 - a_h1) ) * i2
       - ∂E_total/∂w3 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8) * ( a_h2 * (1 - a_h2) ) * i1
       - ∂E_total/∂w4 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8) * ( a_h2 * (1 - a_h2) ) * i2
 
-7. Once we have gradient values for all, feedforward is started. Weights are adjusted using these gradients afer multiplying them with Learning rate.
-8. This process is repeater a no of times, we say it as epoch.
+7. Once we have gradient values for all, feedforward is started. Weights are adjusted using these gradients after multiplying them with Learning rate.
+8. This process is repeated a number of times, we say it as epoch.
 
-In current example we are working we have assumed values of input values, output values & initial weigths. By changing number of learning rate we are trying to under nature of convergence.
+In the current example we are working we have assumed values of input values, output values & initial weights. By changing the number of learning rates we are trying to understand the nature of convergence.
 
 We are changing the learning rate from [0.1, 0.2, 0.5, 0.8, 1.0, 2.0] and analysing it via loss graph.
 
@@ -108,7 +108,6 @@ Learning rate 2.0:
 
 ![image](https://user-images.githubusercontent.com/120099863/211894326-f1b73473-8315-4947-a737-613d74045ac1.png)
 
-
-
+It can be seen that for this dataset, as we are increasing learning rate loss is getting reduced rapidly. But if we keep on increasing it, loss might not converge at all!
 
 
