@@ -85,21 +85,27 @@ In current example we are working we have assumed values of input values, output
 We are changing the learning rate from [0.1, 0.2, 0.5, 0.8, 1.0, 2.0] and analysing it via loss graph.
 
 Learning rate 0.1:
+
 ![image](https://user-images.githubusercontent.com/120099863/211893790-b06278d3-b272-471c-abdc-0b1adfb08f0b.png)
 
 Learning rate 0.2:
+
 ![image](https://user-images.githubusercontent.com/120099863/211893912-9a6f09c8-a20b-4f20-9cb2-49182bac47ca.png)
 
 Learning rate 0.5:
+
 ![image](https://user-images.githubusercontent.com/120099863/211894013-1e3b7993-7cfa-4009-a7ea-9b6d6b34dccb.png)
 
 Learning rate 0.8:
+
 ![image](https://user-images.githubusercontent.com/120099863/211894120-e23bac2a-59e5-41df-978d-5e582e5eabda.png)
 
 Learning rate 1.0:
+
 ![image](https://user-images.githubusercontent.com/120099863/211894203-bb67fec6-cf6e-4ea2-805f-92f9b29c24c4.png)
 
 Learning rate 2.0:
+
 ![image](https://user-images.githubusercontent.com/120099863/211894326-f1b73473-8315-4947-a737-613d74045ac1.png)
 
 
