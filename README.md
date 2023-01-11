@@ -10,8 +10,8 @@ Input Nodes:
 2. i2
 
 Hidden Layer Nodes:
-1. h1
-2. h2
+1. h1 = w1*i1 + w2*i2
+2. h2 = w3*i1 + w4*i2
 
 Activation values for Hidden Layer:
 1. a_h1
