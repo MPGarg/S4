@@ -64,7 +64,7 @@ Backpropagation calcualtions start once we have output and error is calculated.
 4. Similar calculation is done for ∂E_total/∂a_h2:
       - ∂E_total/∂a_h2 = (a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8
 
-5. Gradient for w1 will be represented as below:
+5. Gradient for w1 is represented as below:
       - ∂E_total/∂w1 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w1
       - ∂E_total/∂a_h1 is already calculated in step 3
       - ∂a_h1/∂h1 is sigmoid differential
@@ -77,7 +77,7 @@ Backpropagation calcualtions start once we have output and error is calculated.
       - ∂E_total/∂w3 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8) * ( a_h2 * (1 - a_h2) ) * i1
       - ∂E_total/∂w4 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8) * ( a_h2 * (1 - a_h2) ) * i2
 
-7. Once we have gradient values for all, feedforward is started. Weights are adjusted using these gradients after multiplying them with Learning rate.
+7. Once we have gradient values for all, feedforward starts. Weights are adjusted using these gradients after multiplying them with Learning rate.
 8. This process is repeated a number of times, we say it as epoch.
 
 In the current example we are working we have assumed values of input values, output values & initial weights. By changing the number of learning rates we are trying to understand the nature of convergence.
