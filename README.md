@@ -58,4 +58,8 @@ Backpropagation calcualtions start once we have output and error is calculated.
         - ∂E1/∂a_h1 = (a_o1 - t1) \* a_o1 \* (1 - a_o1) \* w5
       - Similarly ∂E2/∂a_h1 can be written as:
         - ∂E2/∂a_h1 = (a_o2 - t2) \* a_o2 \* (1 - a_o2) \* w7 
-      - ∂E_total/∂a_h1 = (a_o1 - t1) * a_o1 * (1 - a_o1) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w7
+      - ∂E_total/∂a_h1 becomes:
+        - ∂E_total/∂a_h1 = (a_o1 - t1) \* a_o1 \* (1 - a_o1) \* w5 + (a_o2 - t2) \* a_o2 \* (1 - a_o2) \* w7
+        
+4. Similar calculation is done for ∂E_total/∂a_h2:
+      - ∂E_total/∂a_h2 = (a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8
