@@ -31,18 +31,31 @@ Error Calculations:
 3. E_Total = E1 + E2
 
 Backpropagation calcualtions start once we have output and error is calculated.
-1. Calculation of derivative for error with respect to w5
+1. Calculation of gradient for w5
       - ∂E_total/∂w5 = ∂(E1+E2)/∂w5	
       - As E2 is constant wrt w5 thus only E1 remains
         - ∂E_total/∂w5 = ∂E1/∂w5
       - Simplyfying equation further
         - ∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1\*∂a_o1/∂o1\*∂o1/∂w5
-      - ∂E1/∂a01 is calculated below
-        - ∂E1/∂a01 = ∂((1/2) \* (t1 - a_o1)^2)/∂a_o1 = (a_o1 - t1)			
+      - ∂E1/∂ao1 is calculated below
+        - ∂E1/∂ao1 = ∂((1/2) \* (t1 - a_o1)^2)/∂a_o1 = (a_o1 - t1)			
       - ∂a_o1/∂o1 is calculated below (sigmoid differential)
         - ∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1 \* (1 - a_o1)			
       - ∂o1/∂w5 calculation	
         - ∂o1/∂w5 = a_h1	
       - Putting all pieces together we get:
-        - ∂E_total/∂w5 = (a_01 - t1) \* a_o1 \* (1 - a_o1) \* a_h1		
-
+        - ∂E_total/∂w5 = (a_01 - t1) \* a_o1 \* (1 - a_o1) \* a_h1	
+        	
+2. Similar calculations can be done for weights w6, w7 & w8. Here are the equations for them respectively:
+      - ∂E_total/∂w6 = (a_01 - t1) \* a_o1 \* (1 - a_o1) \* a_h2
+      - ∂E_total/∂w7 = (a_02 - t2) \* a_o2 \* (1 - a_o2) \* a_h1
+      - ∂E_total/∂w8 = (a_02 - t2) \* a_o2 \* (1 - a_o2) \* a_h2
+      
+3. Gradient for a_h1 is summation of two values as this node is connected by two routes.
+      - ∂E_total/∂a_h1 = ∂E1/∂a_h1 + ∂E2/∂a_h1
+      - ∂E1/∂a_h1 can be represented as below with subsequent steps:
+        - ∂E1/∂a_h1 = ∂E1/∂a_o1\*∂a_o1/∂o1\*∂o1/∂a_h1
+        - ∂E1/∂a_h1 = (a_o1 - t1) \* a_o1 \* (1 - a_o1) \* w5
+      - Similarly ∂E2/∂a_h1 can be written as:
+        - ∂E2/∂a_h1 = (a_o2 - t2) \* a_o2 \* (1 - a_o2) \* w7 
+      - ∂E_total/∂a_h1 = (a_o1 - t1) * a_o1 * (1 - a_o1) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w7
