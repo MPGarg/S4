@@ -22,10 +22,10 @@ Output Layer Nodes:
 2. o2 = w7\*a_h1 + w8\*a_h2
 
 Activation values for Output Layer:
-1. a_o1 = σ(o1)
-2. a_o2 = σ(o2)
+1. a_o1 = σ(o1) = 1/(1 + exp(-o1))
+2. a_o2 = σ(o2) = 1/(1 + exp(-o2))
 
-Errors:
+Error Calculations:
 1. E1 = (1/2) \* (t1 - a_o1)^2
 2. E2 = (1/2) \* (t2 - a_o2)^2
 3. E_Total = E1 + E2
