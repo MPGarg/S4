@@ -13,7 +13,7 @@ Hidden Layer Nodes:
 1. h1 = w1\*i1 + w2\*i2
 2. h2 = w3\*i1 + w4\*i2
 
-Activation values for Hidden Layer:
+Activation values for Hidden Layer (Sigmoid):
 1. a_h1 = σ(h1) = 1/(1 + exp(-h1))
 2. a_h2 = σ(h2) = 1/(1 + exp(-h2))
 
@@ -21,7 +21,7 @@ Output Layer Nodes:
 1. o1 = w5\*a_h1 + w6\*a_h2
 2. o2 = w7\*a_h1 + w8\*a_h2
 
-Activation values for Output Layer:
+Activation values for Output Layer (Sigmoid):
 1. a_o1 = σ(o1) = 1/(1 + exp(-o1))
 2. a_o2 = σ(o2) = 1/(1 + exp(-o2))
 
@@ -63,3 +63,16 @@ Backpropagation calcualtions start once we have output and error is calculated.
         
 4. Similar calculation is done for ∂E_total/∂a_h2:
       - ∂E_total/∂a_h2 = (a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8
+
+5. Gradiant for w1 will be represented as below:
+      - ∂E_total/∂w1 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w1
+      - ∂E_total/∂a_h1 is already calculated in step 3
+      - ∂a_h1/∂h1 is sigmoid diffential
+      - ∂h1/∂w1 is equal to i1
+      - Overall equation for ∂E_total/∂w1 can be represented as:
+        - ∂E_total/∂w1 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w7) * ( a_h1 * (1 - a_h1) ) * i1
+
+6. Similar calculations can be preformed on w2, w3 and w4. Following are their gradient respectively
+      - ∂E_total/∂w2 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w7) * ( a_h1 * (1 - a_h1) ) * i2
+      - ∂E_total/∂w3 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8) * ( a_h2 * (1 - a_h2) ) * i1
+      - ∂E_total/∂w4 = ((a_o1 - t1) * a_o1 * (1 - a_o1) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2) * w8) * ( a_h2 * (1 - a_h2) ) * i2
