@@ -32,8 +32,8 @@ Error Calculations:
 
 Backpropagation calcualtions start once we have output and error is calculated.
 1. Calculation of derivative for error with respect to w5
-  -∂E_total/∂w5 = ∂(E1+E2)/∂w5	
-  -As E2 is constant wrt w5 thus only E1 remains
+    -∂E_total/∂w5 = ∂(E1+E2)/∂w5	
+    -As E2 is constant wrt w5 thus only E1 remains
   -∂E_total/∂w5 = ∂E1/∂w5			
   -Simplyfying equation further
 ∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1\*∂a_o1/∂o1\*∂o1/∂w5			
