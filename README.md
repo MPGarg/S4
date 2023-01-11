@@ -14,18 +14,18 @@ Hidden Layer Nodes:
 2. h2 = w3\*i1 + w4\*i2
 
 Activation values for Hidden Layer:
-1. a_h1
-2. a_h2
+1. a_h1 = σ(h1) = 1/(1 + exp(-h1))
+2. a_h2 = σ(h2) = 1/(1 + exp(-h2))
 
 Output Layer Nodes:
-1. o1
-2. o2
+1. o1 = w5\*a_h1 + w6\*a_h2
+2. o2 = w7\*a_h1 + w8\*a_h2
 
 Activation values for Output Layer:
-1. a_o1
-2. a_o2
+1. a_o1 = σ(o1)
+2. a_o2 = σ(o2)
 
 Errors:
-1. E1
-2. E2
+1. E1 = (1/2) \* (t1 - a_o1)^2
+2. E2 = (1/2) \* (t2 - a_o2)^2
 3. E_Total = E1 + E2
