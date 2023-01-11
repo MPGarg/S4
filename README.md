@@ -42,5 +42,6 @@ Backpropagation calcualtions start once we have output and error is calculated.
       - ∂a_o1/∂o1 is calculated below (sigmoid differential)
         - ∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1 \* (1 - a_o1)			
       - ∂o1/∂w5 calculation	
-        - ∂o1/∂w5 = a_h1			
+        - ∂o1/∂w5 = a_h1	
+      - ss		
 
