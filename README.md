@@ -110,4 +110,24 @@ Learning rate 2.0:
 
 It can be seen that for this dataset, as we are increasing learning rate loss is getting reduced rapidly. But if we keep on increasing it, loss might not converge at all!
 
+## Assignment Session-3 Part-2
+
+Problem statement:
+Design network fot MNIST which satisfies following conditions:
+
+![image](https://user-images.githubusercontent.com/120099863/211983870-7d44bfbe-291f-4967-9000-9acbf5ad602b.png)
+
+I have used following components in designing of netwrok:
+- 3x3 Convolutions
+- 1x1 Convolutions
+- MaxPooling
+- Batch Normalization
+- Image Normalization
+- DropOut
+- Fully Connected Layer
+- GAP
+
+Here is the summary of network designed:
+
+![image](https://user-images.githubusercontent.com/120099863/211984618-5e04cdd4-a5bf-4699-9317-480f13a7faf2.png)
 
