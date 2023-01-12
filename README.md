@@ -131,6 +131,17 @@ The summary of network designed:
 
 ![image](https://user-images.githubusercontent.com/120099863/211984618-5e04cdd4-a5bf-4699-9317-480f13a7faf2.png)
 
+Points about Network designed:
+- Network has total 9 layers 
+- Logic used for designing layers is CRB (Convolution-Relu-Batch Nomalization)
+- Dropout of 0.05% is used after Batch Normalization layer
+- Dropout & BN not used after 1x1 convolution layer
+- 1x1 convolution is used after two 3x3 convolutions followed by Max pooling
+- Number of channels vary from 8 to 32 at different layer
+- GAP is used after convolution a layer before fully connected layer
+- Fully connected layer is used as last layer
+- Log Softmax used as last layer activation with NLL Loss function
+
 Here trainable parameters are 16,562 (less than 20k) and the network was able to achieve 99.4% test/validation accuracy consistently from 16th epoch onwards. It reached maximum validation accuracy at 18th epoch to 99.5% (9946/10000). 
 
 ![image](https://user-images.githubusercontent.com/120099863/211985645-86cb54fd-daca-4b25-9461-35d2b130dd6f.png)
