@@ -127,7 +127,7 @@ I have used following components in designing of netwrok:
 - Fully Connected Layer
 - GAP
 
-Here is the summary of network designed:
+The summary of network designed:
 
 ![image](https://user-images.githubusercontent.com/120099863/211984618-5e04cdd4-a5bf-4699-9317-480f13a7faf2.png)
 
